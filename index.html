@@ -199,7 +199,26 @@
     <section id="portfolio" class="py-24 bg-white">
         <div class="container mx-auto px-8">
             <h2 class="section-heading">Our Work</h2>
-            <div id="portfolio-items" class="grid md:grid-cols-3 gap-10"></div>
+                        <div id="portfolio-items" class="grid md:grid-cols-3 gap-10">
+                <div class="relative group rounded-xl shadow-xl overflow-hidden fade-in transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/600x400/E0F2F7/004D40?text=Project+1" alt="Industrial Machine Design" class="w-full h-64 object-cover transition duration-300 transform group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-white text-2xl font-bold text-center px-4">Industrial Machine Design</h3>
+                    </div>
+                </div>
+                <div class="relative group rounded-xl shadow-xl overflow-hidden fade-in transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/600x400/E0F2F7/004D40?text=Project+2" alt="Structural Analysis" class="w-full h-64 object-cover transition duration-300 transform group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-white text-2xl font-bold text-center px-4">Structural Analysis</h3>
+                    </div>
+                </div>
+                <div class="relative group rounded-xl shadow-xl overflow-hidden fade-in transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/600x400/E0F2F7/004D40?text=Project+3" alt="Product Optimization" class="w-full h-64 object-cover transition duration-300 transform group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-white text-2xl font-bold text-center px-4">Product Optimization</h3>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -207,7 +226,35 @@
     <section id="blog" class="py-24 bg-gray-100">
         <div class="container mx-auto px-8">
             <h2 class="section-heading">Latest Insights</h2>
-            <div id="blog-posts" class="grid md:grid-cols-3 gap-10"></div>
+                        <div id="blog-posts" class="grid md:grid-cols-3 gap-10">
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden fade-in transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/600x300/E0F2F7/004D40?text=Blog+Post+1" alt="The Future of FEM in Automotive" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">The Future of FEM in Automotive</h3>
+                        <p class="text-gray-600 text-sm mb-4">Date: July 1, 2025</p>
+                        <p class="text-gray-700 leading-relaxed">A deep dive into how Finite Element Method simulations are revolutionizing automotive design and safety standards...</p>
+                        <a href="#" class="text-teal-accent hover:underline mt-5 inline-block font-semibold">Read More &rarr;</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden fade-in transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/600x300/E0F2F7/004D40?text=Blog+Post+2" alt="CAD Best Practices for Startups" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">CAD Best Practices for Startups</h3>
+                        <p class="text-gray-600 text-sm mb-4">Date: June 20, 2025</p>
+                        <p class="text-gray-700 leading-relaxed">Essential tips for new companies to leverage CAD modeling for rapid prototyping and product development...</p>
+                        <a href="#" class="text-teal-accent hover:underline mt-5 inline-block font-semibold">Read More &rarr;</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden fade-in transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/600x300/E0F2F7/004D40?text=Blog+Post+3" alt="Consulting: Bridging the Gap in Engineering" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Consulting: Bridging the Gap in Engineering</h3>
+                        <p class="text-gray-600 text-sm mb-4">Date: June 5, 2025</p>
+                        <p class="text-gray-700 leading-relaxed">How expert engineering consulting can accelerate your project timelines and mitigate design risks...</p>
+                        <a href="#" class="text-teal-accent hover:underline mt-5 inline-block font-semibold">Read More &rarr;</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -315,7 +362,7 @@
         </div>
     </footer>
 
-    <script>
+    <!-- Script removed for static content -->
         // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
