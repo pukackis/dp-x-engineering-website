@@ -29,6 +29,12 @@
       "image": "https://placehold.co/600x400/E0F2F7/004D40?text=Project+5",
       "title_en": "Thermal Simulation",
       "title_de": "Thermische Simulation"
+    },
+    {
+      "id": 6,
+      "image": "https://placehold.co/600x400/E0F2F7/004D40?text=Robotics+Integration",
+      "title_en": "Advanced Robotics Integration",
+      "title_de": "Fortgeschrittene Robotik-Integration"
     }
   ],
   "blogPosts": [
