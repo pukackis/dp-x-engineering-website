@@ -137,7 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Finished rendering blog posts.');
 
             // Re-observe faders after content is loaded
-            faders.forEach(fader => {
+            const newFaders = document.querySelectorAll('.fade-in');
+            newFaders.forEach(fader => {
                 appearOnScroll.observe(fader);
             });
         })
