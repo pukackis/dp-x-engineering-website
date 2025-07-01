@@ -382,32 +382,65 @@
                     // Render Portfolio Items
                     const portfolioContainer = document.getElementById('portfolio-items');
                     data.portfolioItems.forEach(item => {
-                        const portfolioItem = `
-                            <div class="relative group rounded-xl shadow-xl overflow-hidden fade-in transform hover:scale-105 transition duration-300">
-                                <img src="${item.image}" alt="${lang === 'en' ? item.title_en : item.title_de}" class="w-full h-64 object-cover transition duration-300 transform group-hover:scale-110">
-                                <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <h3 class="text-white text-2xl font-bold text-center px-4">${lang === 'en' ? item.title_en : item.title_de}</h3>
-                                </div>
-                            </div>
-                        `;
-                        portfolioContainer.innerHTML += portfolioItem;
+                        const div = document.createElement('div');
+                        div.className = 'relative group rounded-xl shadow-xl overflow-hidden fade-in transform hover:scale-105 transition duration-300';
+
+                        const img = document.createElement('img');
+                        img.src = item.image;
+                        img.alt = lang === 'en' ? item.title_en : item.title_de;
+                        img.className = 'w-full h-64 object-cover transition duration-300 transform group-hover:scale-110';
+                        div.appendChild(img);
+
+                        const overlayDiv = document.createElement('div');
+                        overlayDiv.className = 'absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300';
+
+                        const h3 = document.createElement('h3');
+                        h3.className = 'text-white text-2xl font-bold text-center px-4';
+                        h3.textContent = lang === 'en' ? item.title_en : item.title_de;
+                        overlayDiv.appendChild(h3);
+
+                        div.appendChild(overlayDiv);
+                        portfolioContainer.appendChild(div);
                     });
 
                     // Render Blog Posts
                     const blogContainer = document.getElementById('blog-posts');
                     data.blogPosts.forEach(post => {
-                        const blogPost = `
-                            <div class="bg-white rounded-xl shadow-xl overflow-hidden fade-in transform hover:scale-105 transition duration-300">
-                                <img src="${post.image}" alt="${lang === 'en' ? post.title_en : post.title_de}" class="w-full h-56 object-cover">
-                                <div class="p-8">
-                                    <h3 class="text-2xl font-bold mb-3 text-gray-800">${lang === 'en' ? post.title_en : post.title_de}</h3>
-                                    <p class="text-gray-600 text-sm mb-4">Datum: ${lang === 'en' ? post.date_en : post.date_de}</p>
-                                    <p class="text-gray-700 leading-relaxed">${lang === 'en' ? post.excerpt_en : post.excerpt_de}</p>
-                                    <a href="#" class="text-teal-accent hover:underline mt-5 inline-block font-semibold">Mehr erfahren &rarr;</a>
-                                </div>
-                            </div>
-                        `;
-                        blogContainer.innerHTML += blogPost;
+                        const div = document.createElement('div');
+                        div.className = 'bg-white rounded-xl shadow-xl overflow-hidden fade-in transform hover:scale-105 transition duration-300';
+
+                        const img = document.createElement('img');
+                        img.src = post.image;
+                        img.alt = lang === 'en' ? post.title_en : post.title_de;
+                        img.className = 'w-full h-56 object-cover';
+                        div.appendChild(img);
+
+                        const pDiv = document.createElement('div');
+                        pDiv.className = 'p-8';
+
+                        const h3 = document.createElement('h3');
+                        h3.className = 'text-2xl font-bold mb-3 text-gray-800';
+                        h3.textContent = lang === 'en' ? post.title_en : post.title_de;
+                        pDiv.appendChild(h3);
+
+                        const dateP = document.createElement('p');
+                        dateP.className = 'text-gray-600 text-sm mb-4';
+                        dateP.textContent = `Datum: ${lang === 'en' ? post.date_en : post.date_de}`;
+                        pDiv.appendChild(dateP);
+
+                        const excerptP = document.createElement('p');
+                        excerptP.className = 'text-gray-700 leading-relaxed';
+                        excerptP.textContent = lang === 'en' ? post.excerpt_en : post.excerpt_de;
+                        pDiv.appendChild(excerptP);
+
+                        const a = document.createElement('a');
+                        a.href = '#'; // Placeholder for actual blog post link
+                        a.className = 'text-teal-accent hover:underline mt-5 inline-block font-semibold';
+                        a.textContent = 'Mehr erfahren →';
+                        pDiv.appendChild(a);
+
+                        div.appendChild(pDiv);
+                        blogContainer.appendChild(div);
                     });
 
                     // Re-observe faders after content is loaded
