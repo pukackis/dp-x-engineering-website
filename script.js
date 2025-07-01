@@ -73,6 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log('Processing portfolio item:', item.title_en);
                 const div = document.createElement('div');
                 div.className = 'relative group rounded-xl shadow-xl overflow-hidden fade-in transform hover:scale-105 transition duration-300';
+                div.style.border = '2px solid red';
+                div.style.padding = '10px';
 
                 const img = document.createElement('img');
                 img.src = item.image;
@@ -100,6 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log('Processing blog post:', post.title_en);
                 const div = document.createElement('div');
                 div.className = 'bg-white rounded-xl shadow-xl overflow-hidden fade-in transform hover:scale-105 transition duration-300';
+                div.style.border = '2px solid green';
+                div.style.padding = '10px';
 
                 const img = document.createElement('img');
                 img.src = post.image;
