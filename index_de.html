@@ -374,14 +374,25 @@
             });
 
             // Dynamic Content Loading
-            const lang = document.documentElement.lang || 'en'; // Get current language
+            const lang = document.documentElement.lang || 'de'; // Get current language
 
+            console.log('Attempting to fetch data.json (DE version)...');
             fetch('data.json')
-                .then(response => response.json())
+                .then(response => {
+                    console.log('Response received for data.json (DE version):', response);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
                 .then(data => {
+                    console.log('Data parsed from data.json (DE version):', data);
+
                     // Render Portfolio Items
                     const portfolioContainer = document.getElementById('portfolio-items');
+                    console.log('Rendering portfolio items (DE version)...');
                     data.portfolioItems.forEach(item => {
+                        console.log('Processing portfolio item (DE version):', item.title_de);
                         const div = document.createElement('div');
                         div.className = 'relative group rounded-xl shadow-xl overflow-hidden fade-in transform hover:scale-105 transition duration-300';
 
@@ -402,10 +413,13 @@
                         div.appendChild(overlayDiv);
                         portfolioContainer.appendChild(div);
                     });
+                    console.log('Finished rendering portfolio items (DE version).');
 
                     // Render Blog Posts
                     const blogContainer = document.getElementById('blog-posts');
+                    console.log('Rendering blog posts (DE version)...');
                     data.blogPosts.forEach(post => {
+                        console.log('Processing blog post (DE version):', post.title_de);
                         const div = document.createElement('div');
                         div.className = 'bg-white rounded-xl shadow-xl overflow-hidden fade-in transform hover:scale-105 transition duration-300';
 
@@ -442,13 +456,14 @@
                         div.appendChild(pDiv);
                         blogContainer.appendChild(div);
                     });
+                    console.log('Finished rendering blog posts (DE version).');
 
                     // Re-observe faders after content is loaded
                     faders.forEach(fader => {
                         appearOnScroll.observe(fader);
                     });
                 })
-                .catch(error => console.error('Error loading data:', error));
+                .catch(error => console.error('Error loading data (DE version):', error));
         });
     </script>
 </body>

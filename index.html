@@ -376,12 +376,23 @@
             // Dynamic Content Loading
             const lang = document.documentElement.lang || 'en'; // Get current language
 
+            console.log('Attempting to fetch data.json...');
             fetch('data.json')
-                .then(response => response.json())
+                .then(response => {
+                    console.log('Response received for data.json:', response);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
                 .then(data => {
+                    console.log('Data parsed from data.json:', data);
+
                     // Render Portfolio Items
                     const portfolioContainer = document.getElementById('portfolio-items');
+                    console.log('Rendering portfolio items...');
                     data.portfolioItems.forEach(item => {
+                        console.log('Processing portfolio item:', item.title_en);
                         const div = document.createElement('div');
                         div.className = 'relative group rounded-xl shadow-xl overflow-hidden fade-in transform hover:scale-105 transition duration-300';
 
@@ -402,10 +413,13 @@
                         div.appendChild(overlayDiv);
                         portfolioContainer.appendChild(div);
                     });
+                    console.log('Finished rendering portfolio items.');
 
                     // Render Blog Posts
                     const blogContainer = document.getElementById('blog-posts');
+                    console.log('Rendering blog posts...');
                     data.blogPosts.forEach(post => {
+                        console.log('Processing blog post:', post.title_en);
                         const div = document.createElement('div');
                         div.className = 'bg-white rounded-xl shadow-xl overflow-hidden fade-in transform hover:scale-105 transition duration-300';
 
@@ -442,6 +456,7 @@
                         div.appendChild(pDiv);
                         blogContainer.appendChild(div);
                     });
+                    console.log('Finished rendering blog posts.');
 
                     // Re-observe faders after content is loaded
                     faders.forEach(fader => {
