@@ -72,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
             data.portfolioItems.forEach(item => {
                 console.log('Processing portfolio item:', item.title_en);
                 const div = document.createElement('div');
-                div.className = 'relative group rounded-xl shadow-xl overflow-hidden fade-in transform hover:scale-105 transition duration-300';
                 div.style.border = '2px solid red';
                 div.style.padding = '10px';
 
@@ -101,7 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
             data.blogPosts.forEach(post => {
                 console.log('Processing blog post:', post.title_en);
                 const div = document.createElement('div');
-                div.className = 'bg-white rounded-xl shadow-xl overflow-hidden fade-in transform hover:scale-105 transition duration-300';
                 div.style.border = '2px solid green';
                 div.style.padding = '10px';
 
