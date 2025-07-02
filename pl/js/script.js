@@ -5,11 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
     langSwitchers.forEach(switcher => {
         switcher.addEventListener('click', () => {
             const selectedLang = switcher.dataset.lang;
-            let path = window.location.pathname;
-            // Remove current language directory from path
-            path = path.replace(/\/(en|de|pl)\//, '/');
-            // Redirect to the new language version
-            window.location.href = `/${selectedLang}${path}`;
+            const pathParts = window.location.pathname.split('/');
+            // Assuming URL structure is /repo-name/lang/page.html
+            // pathParts[0] is empty
+            // pathParts[1] is repo-name
+            // pathParts[2] is current language (en, de, pl)
+            pathParts[2] = selectedLang; // Update language part
+            const newPathname = pathParts.join('/');
+            window.location.href = window.location.origin + newPathname;
         });
     });
 
