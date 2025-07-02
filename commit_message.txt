@@ -1,6 +1,8 @@
-feat: Convert website to single-page layout
+feat: Implement detailed subpages and enhanced navigation
 
-This commit transforms the multi-page website into a single-page application:
-- All content from 'about.html', 'services.html', 'portfolio.html', 'work.html', and 'contact.html' has been integrated into 'index.html' as distinct sections.
-- Navigation links have been updated to use anchor links (e.g., '#about') for smooth scrolling to respective sections.
-- The 'pages' directory and its contents have been removed as they are no longer needed for the main navigation.
+This commit significantly expands the website's content and navigation:
+- Created dedicated subpages for each main section (About Us, Services, Work With Us, Contact) in their respective directories (e.g., 'about/index.html').
+- Developed a comprehensive portfolio section with a main listing page ('portfolio/index.html') and individual detail pages for each project (e.g., 'portfolio/electric-motor-housing.html').
+- Updated the main 'index.html' to include "Read More" or "View All" buttons in each section, linking to their respective detailed subpages.
+- Ensured all navigation links across the site correctly point to either anchor sections on the main page or to the new subpages.
+- Added more detailed content and placeholder images to the new subpages.
