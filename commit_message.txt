@@ -1,3 +1,3 @@
-feat: Integrate company logo into header
+feat: Adjust logo size and position in header
 
-This commit replaces the text-based logo in the header with the provided 'logo_firmy.png' image across all HTML files. Corresponding CSS styles have been added to ensure the logo is displayed correctly and responsively.
+This commit increases the size of the company logo in the header and slightly shifts its position to the right for better visual alignment.

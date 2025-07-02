@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DP-X Engineering - Kontakt</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+                        <div class="logo"><img src="../img/logo_firmy.png" alt="DP-X Engineering Logo"></div>
+            <ul>
+                <li><a href="../index.html#hero">Strona Główna</a></li>
+                <li><a href="../index.html#about">O Nas</a></li>
+                <li><a href="../index.html#services">Usługi</a></li>
+                <li><a href="../index.html#portfolio">Portfolio</a></li>
+                <li><a href="../index.html#work">Współpraca</a></li>
+                <li><a href="../index.html#contact">Kontakt</a></li>
+            </ul>
+            <div class="lang-switcher">
+                <span data-lang="en">EN</span> / <span data-lang="de">DE</span> / <span class="active" data-lang="pl">PL</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <h1>Skontaktuj się z DP-X Engineering</h1>
+            <p>Chętnie dowiemy się o Twoim projekcie i omówimy, jak nasze doświadczenie w projektowaniu mechanicznym może ożywić Twoje pomysły. Wypełnij poniższy formularz lub skontaktuj się z nami bezpośrednio.</p>
+
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form action="#" method="POST" enctype="multipart/form-data">
+                        <label for="name">Imię i Nazwisko:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="subject">Temat:</label>
+                        <input type="text" id="subject" name="subject">
+
+                        <label for="message">Wiadomość:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+
+                        <label for="file-upload">Załącz plik (opcjonalnie):</label>
+                        <input type="file" id="file-upload" name="file-upload">
+
+                        <button type="submit" class="btn primary">Wyślij wiadomość</button>
+                    </form>
+                </div>
+                <div class="contact-details">
+                    <h2>Informacje Kontaktowe</h2>
+                    <p><strong>E-mail:</strong> contact@dp-xe.com</p>
+                    <p><strong>Telefon:</strong> +48 XXX XXX XXX</p>
+                    <p><strong>LinkedIn:</strong> <a href="#" target="_blank">Profil LinkedIn DP-X Engineering</a></p>
+                    
+                    <div class="map-placeholder">
+                        <p>Placeholder Mapy Google</p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2538.4066000000003!2d21.00000000000000!3d52.20000000000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTLCsDEyJzAwLjAiTiAyMSswMCcwMC4wIkU!5e0!3m2!1spl!2spl!4v1678901234567!5m2!1spl!2spl" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 DP-X Engineering. Wszelkie prawa zastrzeżone.</p>
+        <ul>
+            <li><a href="../index.html#hero">Strona Główna</a></li>
+            <li><a href="../index.html#about">O Nas</a></li>
+            <li><a href="../index.html#services">Usługi</a></li>
+            <li><a href="../index.html#portfolio">Portfolio</a></li>
+            <li><a href="../index.html#work">Współpraca</a></li>
+            <li><a href="../index.html#contact">Kontakt</a></li>
+        </ul>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

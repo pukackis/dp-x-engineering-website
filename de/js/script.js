@@ -4,13 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     langSwitchers.forEach(switcher => {
         switcher.addEventListener('click', () => {
-            langSwitchers.forEach(s => s.classList.remove('active'));
-            switcher.classList.add('active');
-            // Here you would implement the actual language change logic
-            // For a static site, this might involve redirecting to a different page
-            // or dynamically changing content based on the selected language.
-            // For now, it just changes the active state.
-            console.log('Language switched to:', switcher.dataset.lang);
+            const selectedLang = switcher.dataset.lang;
+            let path = window.location.pathname;
+            // Remove current language directory from path
+            path = path.replace(/\/(en|de|pl)\//, '/');
+            // Redirect to the new language version
+            window.location.href = `/${selectedLang}${path}`;
         });
     });
 
