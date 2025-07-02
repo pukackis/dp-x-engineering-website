@@ -1,11 +1,6 @@
-feat: Implement initial website structure and styling
+feat: Convert website to single-page layout
 
-This commit introduces the foundational elements of the DP-X Engineering website:
-- Basic HTML structure for all main pages (index, about, services, portfolio, work, contact).
-- Comprehensive CSS styling for a modern, professional, and responsive design, including:
-  - Color palette and typography.
-  - Header, navigation, and footer styling.
-  - Hero section with placeholder background.
-  - Styling for content sections, image galleries, service grids, portfolio items, and contact forms.
-- Basic JavaScript for language switcher (visual only) and smooth scrolling.
-- Placeholder images from placehold.co for visual elements.
+This commit transforms the multi-page website into a single-page application:
+- All content from 'about.html', 'services.html', 'portfolio.html', 'work.html', and 'contact.html' has been integrated into 'index.html' as distinct sections.
+- Navigation links have been updated to use anchor links (e.g., '#about') for smooth scrolling to respective sections.
+- The 'pages' directory and its contents have been removed as they are no longer needed for the main navigation.
