@@ -1,5 +1,3 @@
-feat: Update color palette and placeholder image colors
+feat: Implement hover effect for descriptive texts
 
-This commit introduces a new color palette for the website, with a darker default theme. The header and footer background color has been updated to #256092.
-
-Additionally, the background and text colors of placeholder images across all HTML files have been updated to match the new dark theme, ensuring visual consistency.
+This commit changes the default color of descriptive texts to #d4d5d8 and adds a hover effect that changes their color to #56e1e6, providing a more interactive user experience.
