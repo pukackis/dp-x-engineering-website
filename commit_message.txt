@@ -1,1 +1,1 @@
-Update website content and styling based on new prompt, fix Tailwind CSS configuration.
+Test Tailwind CSS integration by changing background to red.
