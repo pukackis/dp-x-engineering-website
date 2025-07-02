@@ -5,13 +5,16 @@ document.addEventListener('DOMContentLoaded', () => {
     langSwitchers.forEach(switcher => {
         switcher.addEventListener('click', () => {
             const selectedLang = switcher.dataset.lang;
-            const pathParts = window.location.pathname.split('/');
+            const pathParts = window.location.pathname.split('/').filter(part => part !== '');
+            
             // Assuming URL structure is /repo-name/lang/page.html
-            // pathParts[0] is empty
-            // pathParts[1] is repo-name
-            // pathParts[2] is current language (en, de, pl)
-            pathParts[2] = selectedLang; // Update language part
-            const newPathname = pathParts.join('/');
+            // pathParts[0] is repo-name
+            // pathParts[1] is current language (en, de, pl)
+            
+            const repoName = pathParts[0];
+            const currentPagePath = pathParts.slice(2).join('/'); // Get path after language
+
+            const newPathname = `/${repoName}/${selectedLang}/${currentPagePath}`;
             window.location.href = window.location.origin + newPathname;
         });
     });
