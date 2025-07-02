@@ -4,20 +4,15 @@
 
 /* Custom styles for DP-X Engineering website */
 
-/* Color Palette */
-/* --primary-color: #00bcd4; /* Marine Turquoise */
-/* --secondary-color: #ffffff; /* White */
-/* --tertiary-color: #343a40; /* Graphite */
-
 body {
-    @apply text-gray-800;
+    @apply font-inter text-gray-800;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    @apply font-bold;
+    @apply font-poppins font-bold;
 }
 
-/* Example of custom utility classes if needed */
+/* Custom utility classes */
 .section-padding {
     @apply py-16 px-4;
 }

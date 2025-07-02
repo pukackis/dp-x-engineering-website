@@ -7,7 +7,7 @@ const t = useTranslations(lang);
 ---
 
 <Layout title="DP-X Engineering">
-    <header class="bg-gray-900 text-white py-4">
+    <header class="bg-gray-900 text-white py-4 sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
             <div class="logo">
                 <a href="/">
@@ -16,17 +16,17 @@ const t = useTranslations(lang);
             </div>
             <nav>
                 <ul class="flex space-x-4">
-                    <li><a href="#hero" class="hover:text-blue-400 transition-colors duration-300">{t('nav.home')}</a></li>
-                    <li><a href="#services" class="hover:text-blue-400 transition-colors duration-300">{t('nav.services')}</a></li>
-                    <li><a href="#portfolio" class="hover:text-blue-400 transition-colors duration-300">{t('nav.portfolio')}</a></li>
-                    <li><a href="#about" class="hover:text-blue-400 transition-colors duration-300">{t('nav.about')}</a></li>
-                    <li><a href="#clients" class="hover:text-blue-400 transition-colors duration-300">{t('nav.clients')}</a></li>
-                    <li><a href="#contact" class="hover:text-blue-400 transition-colors duration-300">{t('nav.contact')}</a></li>
+                    <li><a href="#hero" class="hover:text-teal-400 transition-colors duration-300">{t('nav.home')}</a></li>
+                    <li><a href="#services" class="hover:text-teal-400 transition-colors duration-300">{t('nav.services')}</a></li>
+                    <li><a href="#portfolio" class="hover:text-teal-400 transition-colors duration-300">{t('nav.portfolio')}</a></li>
+                    <li><a href="#about" class="hover:text-teal-400 transition-colors duration-300">{t('nav.about')}</a></li>
+                    <li><a href="#clients" class="hover:text-teal-400 transition-colors duration-300">{t('nav.clients')}</a></li>
+                    <li><a href="#contact" class="hover:text-teal-400 transition-colors duration-300">{t('nav.contact')}</a></li>
                 </ul>
             </nav>
             <div class="language-switcher">
-                <a href="/en" class="text-white hover:text-blue-400 transition-colors duration-300">EN</a> /
-                <a href="/de" class="text-white hover:text-blue-400 transition-colors duration-300">DE</a>
+                <a href="/en" class="text-white hover:text-teal-400 transition-colors duration-300">EN</a> /
+                <a href="/de" class="text-white hover:text-teal-400 transition-colors duration-300">DE</a>
             </div>
         </div>
     </header>
@@ -37,8 +37,8 @@ const t = useTranslations(lang);
             <h1 class="text-5xl font-bold mb-4">{t('hero.heading')}</h1>
             <p class="text-xl mb-8 max-w-2xl mx-auto">{t('hero.description')}</p>
             <div class="space-x-4">
-                <a href="#portfolio" class="bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-lg transition-colors duration-300">{t('hero.cta.work')}</a>
-                <a href="#contact" class="border border-white text-white py-3 px-6 rounded-lg hover:bg-white hover:text-blue-500 transition-colors duration-300">{t('hero.cta.contact')}</a>
+                <a href="#portfolio" class="bg-teal-500 hover:bg-teal-600 text-white py-3 px-6 rounded-lg transition-colors duration-300">{t('hero.cta.work')}</a>
+                <a href="#contact" class="border border-white text-white py-3 px-6 rounded-lg hover:bg-white hover:text-teal-500 transition-colors duration-300">{t('hero.cta.contact')}</a>
             </div>
         </div>
     </section>
@@ -49,20 +49,19 @@ const t = useTranslations(lang);
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
                     <img src="https://placehold.co/600x400?text=Team+at+Work" alt="Team at Work" class="rounded-lg shadow-lg mb-4">
-                    <p class="text-lg mb-4">{t('about.history')}</p>
-                    <p class="text-lg">{t('about.approach')}</p>
+                    <p class="text-lg mb-4">{t('about.main_text')}</p>
                 </div>
                 <div>
-                    <h3 class="text-3xl font-bold mb-4">{t('about.team')}</h3>
+                    <h3 class="text-3xl font-bold mb-4">Unser Team</h3>
                     <div class="flex flex-col items-center mb-6">
                         <img src="https://placehold.co/150x150?text=Szymon+Pukacki" alt="Szymon Pukacki" class="rounded-full w-32 h-32 object-cover mb-2">
                         <p class="font-semibold">Szymon Pukacki</p>
-                        <p class="text-gray-600">Bio for Szymon Pukacki.</p>
+                        <p class="text-gray-600">{t('about.szymon_pukacki_bio')}</p>
                     </div>
                     <div class="flex flex-col items-center">
                         <img src="https://placehold.co/150x150?text=Michal+Dydecki" alt="Michał Dydecki" class="rounded-full w-32 h-32 object-cover mb-2">
                         <p class="font-semibold">Michał Dydecki</p>
-                        <p class="text-gray-600">Bio for Michał Dydecki.</p>
+                        <p class="text-gray-600">{t('about.michal_dydecki_bio')}</p>
                     </div>
                 </div>
             </div>
@@ -72,16 +71,16 @@ const t = useTranslations(lang);
     <section id="services" class="py-16">
         <div class="container mx-auto text-center">
             <h2 class="text-4xl font-bold mb-8">{t('services.heading')}</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <img src="https://placehold.co/100x100?text=CAD" alt="CAD Modeling Icon" class="mx-auto mb-4">
                     <h3 class="text-xl font-semibold mb-2">{t('services.cad_modeling')}</h3>
                     <p class="text-gray-600">{t('services.cad_modeling.description')}</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://placehold.co/100x100?text=Docs" alt="Documentation Icon" class="mx-auto mb-4">
-                    <h3 class="text-xl font-semibold mb-2">{t('services.documentation')}</h3>
-                    <p class="text-gray-600">{t('services.documentation.description')}</p>
+                    <img src="https://placehold.co/100x100?text=Drawings" alt="Technical Drawings Icon" class="mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">{t('services.technical_drawings')}</h3>
+                    <p class="text-gray-600">{t('services.technical_drawings.description')}</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <img src="https://placehold.co/100x100?text=Reverse" alt="Reverse Engineering Icon" class="mx-auto mb-4">
@@ -89,41 +88,38 @@ const t = useTranslations(lang);
                     <p class="text-gray-600">{t('services.reverse_engineering.description')}</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://placehold.co/100x100?text=Consult" alt="Consulting Icon" class="mx-auto mb-4">
-                    <h3 class="text-xl font-semibold mb-2">{t('services.consulting')}</h3>
-                    <p class="text-gray-600">{t('services.consulting.description')}</p>
+                    <img src="https://placehold.co/100x100?text=Optimize" alt="Design Optimization Icon" class="mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">{t('services.design_optimization')}</h3>
+                    <p class="text-gray-600">{t('services.design_optimization.description')}</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="https://placehold.co/100x100?text=Product" alt="Product Development Icon" class="mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">{t('services.product_development')}</h3>
+                    <p class="text-gray-600">{t('services.product_development.description')}</p>
                 </div>
             </div>
-            <a href="#" class="mt-8 inline-block bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-lg transition-colors duration-300">{t('services.offer_pdf')}</a>
         </div>
     </section>
 
     <section id="portfolio" class="py-16 bg-gray-100">
         <div class="container mx-auto text-center">
             <h2 class="text-4xl font-bold mb-8">{t('portfolio.heading')}</h2>
-            <div class="flex justify-center space-x-4 mb-8">
-                <button class="bg-gray-200 hover:bg-gray-300 py-2 px-4 rounded-lg transition-colors duration-300">{t('portfolio.filter.automotive')}</button>
-                <button class="bg-gray-200 hover:bg-gray-300 py-2 px-4 rounded-lg transition-colors duration-300">{t('portfolio.filter.industrial')}</button>
-                <button class="bg-gray-200 hover:bg-gray-300 py-2 px-4 rounded-lg transition-colors duration-300">{t('portfolio.filter.consumer')}</button>
-            </div>
+            <p class="text-lg mb-8 text-gray-600">{t('portfolio.nda_info')}</p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white p-4 rounded-lg shadow-lg">
-                    <img src="https://placehold.co/400x300?text=Project+1" alt="Project 1" class="rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2">Project Title 1</h3>
-                    <p class="text-gray-600">Short description of Project 1.</p>
-                    <a href="#" class="text-blue-500 hover:underline mt-2 inline-block">{t('portfolio.case_study_pdf')}</a>
+                    <img src="https://placehold.co/400x300?text=Automotive+Heat+Sink" alt="Automotive Heat Sink Housing" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">{t('portfolio.automotive_heat_sink')}</h3>
+                    <p class="text-gray-600">{t('portfolio.automotive_heat_sink.description')}</p>
                 </div>
                 <div class="bg-white p-4 rounded-lg shadow-lg">
-                    <img src="https://placehold.co/400x300?text=Project+2" alt="Project 2" class="rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2">Project Title 2</h3>
-                    <p class="text-gray-600">Short description of Project 2.</p>
-                    <a href="#" class="text-blue-500 hover:underline mt-2 inline-block">{t('portfolio.case_study_pdf')}</a>
+                    <img src="https://placehold.co/400x300?text=Custom+Gearbox" alt="Custom Gearbox Assembly" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">{t('portfolio.custom_gearbox')}</h3>
+                    <p class="text-gray-600">{t('portfolio.custom_gearbox.description')}</p>
                 </div>
                 <div class="bg-white p-4 rounded-lg shadow-lg">
-                    <img src="https://placehold.co/400x300?text=Project+3" alt="Project 3" class="rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2">Project Title 3</h3>
-                    <p class="text-gray-600">Short description of Project 3.</p>
-                    <a href="#" class="text-blue-500 hover:underline mt-2 inline-block">{t('portfolio.case_study_pdf')}</a>
+                    <img src="https://placehold.co/400x300?text=Consumer+Device" alt="Smart Consumer Device Enclosure" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">{t('portfolio.consumer_device')}</h3>
+                    <p class="text-gray-600">{t('portfolio.consumer_device.description')}</p>
                 </div>
             </div>
         </div>
@@ -134,17 +130,17 @@ const t = useTranslations(lang);
             <h2 class="text-4xl font-bold mb-8">{t('clients.heading')}</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-semibold mb-4">{t('clients.steps')}</h3>
-                    <ul class="list-disc list-inside text-left space-y-2">
-                        <li>Initial Consultation</li>
-                        <li>Proposal & Agreement</li>
-                        <li>Design & Development</li>
-                        <li>Review & Revisions</li>
-                        <li>Final Delivery</li>
+                    <h3 class="text-2xl font-semibold mb-4">Wie wir arbeiten</h3>
+                    <ul class="list-decimal list-inside text-left space-y-2">
+                        <li>{t('clients.step1')}</li>
+                        <li>{t('clients.step2')}</li>
+                        <li>{t('clients.step3')}</li>
+                        <li>{t('clients.step4')}</li>
                     </ul>
+                    <p class="text-lg mt-4">{t('clients.additional_info')}</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-semibold mb-4">{t('clients.billing')}</h3>
+                    <h3 class="text-2xl font-semibold mb-4">Abrechnungsmethoden</h3>
                     <ul class="list-disc list-inside text-left space-y-2">
                         <li>{t('clients.b2b')}</li>
                         <li>{t('clients.contract')}</li>
@@ -152,7 +148,7 @@ const t = useTranslations(lang);
                     </ul>
                 </div>
             </div>
-            <a href="#contact" class="mt-8 inline-block bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-lg transition-colors duration-300">{t('hero.cta.contact')}</a>
+            <a href="#contact" class="mt-8 inline-block bg-teal-500 hover:bg-teal-600 text-white py-3 px-6 rounded-lg transition-colors duration-300">{t('hero.cta.contact')}</a>
         </div>
     </section>
 
@@ -178,16 +174,16 @@ const t = useTranslations(lang);
                             <label for="attachments" class="block text-gray-700 text-sm font-bold mb-2">{t('contact.form.attachments')}:</label>
                             <input type="file" id="attachments" name="attachments" multiple class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                         </div>
-                        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">{t('contact.form.submit')}</button>
+                        <button type="submit" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">{t('contact.form.submit')}</button>
                     </form>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg text-left">
-                    <h3 class="text-2xl font-semibold mb-4">{t('contact.heading')}</h3>
-                    <p class="mb-2"><span class="font-semibold">{t('contact.email')}:</span> contact@dp-xe.com</p>
-                    <p class="mb-2"><span class="font-semibold">{t('contact.phone')}:</span> +48 123 456 789</p>
-                    <p class="mb-2"><span class="font-semibold">{t('contact.linkedin')}:</span> <a href="#" class="text-blue-500 hover:underline">DP-X Engineering</a></p>
+                    <h3 class="text-2xl font-semibold mb-4">Kontaktinformationen</h3>
+                    <p class="mb-2"><span class="font-semibold">E-Mail:</span> {t('contact.email_address')}</p>
+                    <p class="mb-2"><span class="font-semibold">Telefon:</span> {t('contact.phone_number')}</p>
+                    <p class="mb-2"><span class="font-semibold">LinkedIn:</span> <a href="#" class="text-teal-500 hover:underline">{t('contact.linkedin_profile')}</a></p>
                     <div class="mt-4">
-                        <h4 class="font-semibold mb-2">{t('contact.location')}:</h4>
+                        <h4 class="font-semibold mb-2">Bürostandort:</h4>
                         <img src="https://placehold.co/400x250?text=Office+Map" alt="Office Location Map" class="rounded-lg shadow-lg">
                     </div>
                 </div>
