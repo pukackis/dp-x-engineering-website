@@ -12,12 +12,12 @@
         <nav>
             <div class="logo">DP-X Engineering</div>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/about.html">About Us</a></li>
-                <li><a href="pages/services.html">Services</a></li>
-                <li><a href="pages/portfolio.html">Portfolio</a></li>
-                <li><a href="pages/work.html">Work With Us</a></li>
-                <li><a href="pages/contact.html">Contact</a></li>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#work">Work With Us</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="lang-switcher">
                 <span class="active" data-lang="en">EN</span> / <span data-lang="de">DE</span>
@@ -25,26 +25,185 @@
         </nav>
     </header>
 
-    <section class="hero">
+    <section id="hero" class="hero">
         <div class="hero-content">
             <h1>Precision Engineering. Tailored Solutions.</h1>
             <p>At DP-X Engineering, we deliver innovative mechanical design solutions tailored to your project needs. With experience in automotive, consumer and industrial engineering, we provide precise, functional and manufacturable results. Let’s build something exceptional.</p>
             <div class="cta-buttons">
-                <a href="pages/contact.html" class="btn primary">Contact Us</a>
-                <a href="pages/portfolio.html" class="btn secondary">See Our Work</a>
+                <a href="#contact" class="btn primary">Contact Us</a>
+                <a href="#portfolio" class="btn secondary">See Our Work</a>
             </div>
         </div>
     </section>
 
+    <main>
+        <section id="about" class="content-section">
+            <h1>About Us</h1>
+            <p>DP-X Engineering was founded by passionate mechanical engineers with hands-on industry experience in both Poland and Germany. We combine solid engineering principles with practical understanding of manufacturing, delivering designs that work in the real world.</p>
+            <p>Whether it’s a single component or a complete assembly – we approach each task with precision, creativity, and responsibility.</p>
+
+            <h2>Our Founders</h2>
+            <ul>
+                <li><strong>Szymon Pukacki</strong> – Mechanical Engineer, Poland</li>
+                <li><strong>Michał Dydecki</strong> – Mechanical Engineer, Germany</li>
+            </ul>
+
+            <div class="image-gallery">
+                <!-- Placeholder images -->
+                <img src="https://placehold.co/600x400/16B6A0/FFFFFF/jpg?text=Team+at+Work" alt="Team at Work">
+                <img src="https://placehold.co/600x400/16B6A0/FFFFFF/jpg?text=CAD+Software" alt="CAD Software">
+                <img src="https://placehold.co/600x400/16B6A0/FFFFFF/jpg?text=Office+Environment" alt="Office Environment">
+            </div>
+        </section>
+
+        <section id="services" class="content-section">
+            <h1>Our Services</h1>
+            <div class="services-grid">
+                <div class="service-item">
+                    <img src="https://placehold.co/100x100/16B6A0/FFFFFF/jpg?text=Icon" alt="Icon">
+                    <h3>3D CAD Modeling & Assemblies</h3>
+                    <p>Precise and detailed 3D models for individual components and complex assemblies.</p>
+                </div>
+                <div class="service-item">
+                    <img src="https://placehold.co/100x100/16B6A0/FFFFFF/jpg?text=Icon" alt="Icon">
+                    <h3>Technical Drawings & Manufacturing Documentation</h3>
+                    <p>Comprehensive documentation ready for manufacturing, adhering to industry standards.</p>
+                </div>
+                <div class="service-item">
+                    <img src="https://placehold.co/100x100/16B6A0/FFFFFF/jpg?text=Icon" alt="Icon">
+                    <h3>Reverse Engineering</h3>
+                    <p>Recreating designs from existing physical parts or assemblies.</p>
+                </div>
+                <div class="service-item">
+                    <img src="https://placehold.co/100x100/16B6A0/FFFFFF/jpg?text=Icon" alt="Icon">
+                    <h3>Design Optimization & Consulting</h3>
+                    <p>Improving existing designs for performance, cost-efficiency, and manufacturability.</p>
+                </div>
+                <div class="service-item">
+                    <img src="https://placehold.co/100x100/16B6A0/FFFFFF/jpg?text=Icon" alt="Icon">
+                    <h3>Product Development</h3>
+                    <p>Full-cycle product development from concept to production-ready designs.</p>
+                </div>
+            </div>
+            <p class="note">We use professional software (Siemens NX, SolidWorks, Inventor) and ensure full support from concept to production.</p>
+        </section>
+
+        <section id="portfolio" class="content-section">
+            <h1>Our Portfolio</h1>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="automotive">Automotive</button>
+                <button class="filter-btn" data-filter="industrial">Industrial</button>
+                <button class="filter-btn" data-filter="consumer">Consumer</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="automotive">
+                    <img src="https://placehold.co/600x400/1A1A1A/FFFFFF/jpg?text=Electric+Motor+Housing" alt="Electric Motor Housing">
+                    <h3>Electric Motor Housing (2024)</h3>
+                    <p>Designed for die-casting, optimized for cooling and assembly.</p>
+                </div>
+                <div class="portfolio-item" data-category="industrial">
+                    <img src="https://placehold.co/600x400/1A1A1A/FFFFFF/jpg?text=Industrial+Machine+Part" alt="Industrial Machine Part">
+                    <h3>Industrial Machine Part (2023)</h3>
+                    <p>Custom component for heavy machinery, focusing on durability.</p>
+                </div>
+                <div class="portfolio-item" data-category="consumer">
+                    <img src="https://placehold.co/600x400/1A1A1A/FFFFFF/jpg?text=Consumer+Product+Enclosure" alt="Consumer Product Enclosure">
+                    <h3>Consumer Product Enclosure (2024)</h3>
+                    <p>Ergonomic design for a handheld device, optimized for mass production.</p>
+                </div>
+                <!-- Add more portfolio items as needed -->
+            </div>
+            <p class="note">Some projects are presented with limited details due to NDA agreements.</p>
+        </section>
+
+        <section id="work" class="content-section">
+            <h1>Work With Us</h1>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h3>You send us your problem or design task</h3>
+                    <p>Clearly articulate your needs and what you aim to achieve.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h3>We analyze it and propose a solution</h3>
+                    <p>Our experts will review your requirements and suggest the best approach.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h3>You receive an offer and timeline</h3>
+                    <p>We provide a detailed proposal with costs and project schedule.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <h3>We deliver results and support implementation</h3>
+                    <p>High-quality deliverables and assistance during the integration phase.</p>
+                </div>
+            </div>
+
+            <h2>Collaboration Options</h2>
+            <ul>
+                <li>B2B contracts</li>
+                <li>Freelance contracts</li>
+                <li>Long-term outsourcing</li>
+            </ul>
+
+            <div class="cta-contact">
+                <p>Ready to start a project?</p>
+                <a href="#contact" class="btn primary">Contact Us</a>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h1>Contact Us</h1>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form action="#" method="POST" enctype="multipart/form-data">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject">
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+
+                        <label for="file-upload">Attach File (Optional):</label>
+                        <input type="file" id="file-upload" name="file-upload">
+
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-details">
+                    <h2>Get in Touch</h2>
+                    <p><strong>Email:</strong> contact@dp-xe.com</p>
+                    <p><strong>Phone:</strong> +48 XXX XXX XXX</p>
+                    <p><strong>LinkedIn:</strong> <a href="#" target="_blank">DP-X Engineering LinkedIn Profile</a></p>
+                    
+                    <!-- Optional embedded map -->
+                    <div class="map-placeholder">
+                        <p>Google Maps Placeholder</p>
+                        <!-- Replace with actual Google Maps embed code -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2538.4066000000003!2d21.00000000000000!3d52.20000000000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTLCsDEyJzAwLjAiTiAyMSswMCcwMC4wIkU!5e0!3m2!1spl!2spl!4v1678901234567!5m2!1spl!2spl" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
         <p>&copy; 2024 DP-X Engineering. All rights reserved.</p>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="pages/about.html">About Us</a></li>
-            <li><a href="pages/services.html">Services</a></li>
-            <li><a href="pages/portfolio.html">Portfolio</a></li>
-            <li><a href="pages/work.html">Work With Us</a></li>
-            <li><a href="pages/contact.html">Contact</a></li>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#work">Work With Us</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </footer>
 
