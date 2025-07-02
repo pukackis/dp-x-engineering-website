@@ -1,0 +1,3 @@
+Fix: Corrected invalid JavaScript selector for mobile menu
+
+The querySelector('.md:hidden') was causing a syntax error, which prevented the rest of the script from running and left page sections invisible. Replaced the selector with a more robust getElementById('mobile-menu-button') and added the corresponding ID to the button in both HTML files. This resolves the script error and ensures all page content is displayed correctly.
