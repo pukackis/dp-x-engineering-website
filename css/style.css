@@ -1,9 +1,9 @@
 :root {
     --primary-color: #59acdf; /* Blue */
     --background-color: #04131a; /* Dark background */
-    --accent-color: #256092; /* New color for header and footer */
+    --accent-color: #256092; /* Header and footer color */
     --light-gray: #102530; /* Slightly lighter dark for cards/sections */
-    --text-color: #56e1e6; /* Light for general text */
+    --text-color: #d4d5d8; /* New default text color */
     --heading-color: #56e1e6; /* Light for headings */
     --border-color: #20303a; /* Slightly lighter border for dark elements */
 }
@@ -270,7 +270,7 @@ nav ul li a:hover::after {
 }
 
 .content-section:nth-of-type(even) {
-    background-color: var(--light-gray); /* Alternate background for even sections */
+    background-color: var(--light-gray);
 }
 
 .content-section h1,
@@ -294,6 +294,11 @@ nav ul li a:hover::after {
     text-align: center;
     font-size: 1.1rem;
     color: var(--text-color);
+    transition: color 0.3s ease; /* Added transition */
+}
+
+.content-section p:hover {
+    color: #56e1e6; /* Hover color */
 }
 
 .content-section ul {
@@ -309,6 +314,11 @@ nav ul li a:hover::after {
     position: relative;
     font-size: 1.15rem;
     color: var(--text-color);
+    transition: color 0.3s ease; /* Added transition */
+}
+
+.content-section ul li:hover {
+    color: #56e1e6; /* Hover color */
 }
 
 .content-section ul li::before {
@@ -383,6 +393,12 @@ nav ul li a:hover::after {
     line-height: 1.7;
     margin-bottom: 15px;
     text-align: left;
+    color: var(--text-color); /* Added for consistency */
+    transition: color 0.3s ease; /* Added transition */
+}
+
+.founder-profile p:hover {
+    color: #56e1e6; /* Hover color */
 }
 
 .founder-profile .location {
@@ -390,6 +406,11 @@ nav ul li a:hover::after {
     color: var(--text-color); /* Use text color for location */
     font-size: 0.95rem;
     text-align: right;
+    transition: color 0.3s ease; /* Added transition */
+}
+
+.founder-profile .location:hover {
+    color: #56e1e6; /* Hover color */
 }
 
 /* Services - Grid */
@@ -434,6 +455,11 @@ nav ul li a:hover::after {
     font-size: 1.05rem;
     color: var(--text-color);
     margin: 0 auto;
+    transition: color 0.3s ease; /* Added transition */
+}
+
+.service-item p:hover {
+    color: #56e1e6; /* Hover color */
 }
 
 .note {
@@ -442,6 +468,11 @@ nav ul li a:hover::after {
     margin-top: 70px;
     color: var(--text-color); /* Use text color for notes */
     font-size: 1.05rem;
+    transition: color 0.3s ease; /* Added transition */
+}
+
+.note:hover {
+    color: #56e1e6; /* Hover color */
 }
 
 /* Portfolio - Filters and Grid */
@@ -516,6 +547,11 @@ nav ul li a:hover::after {
     color: var(--text-color);
     text-align: left;
     margin: 0;
+    transition: color 0.3s ease; /* Added transition */
+}
+
+.portfolio-item p:hover {
+    color: #56e1e6; /* Hover color */
 }
 
 /* Project Detail Pages */
@@ -525,6 +561,11 @@ nav ul li a:hover::after {
     max-width: 900px;
     margin: 0 auto 50px auto;
     color: var(--text-color); /* Use text color for project intro */
+    transition: color 0.3s ease; /* Added transition */
+}
+
+.project-intro:hover {
+    color: #56e1e6; /* Hover color */
 }
 
 .project-details-grid {
@@ -558,6 +599,12 @@ nav ul li a:hover::after {
     text-align: left;
     margin-bottom: 20px;
     font-size: 1.05rem;
+    color: var(--text-color); /* Added for consistency */
+    transition: color 0.3s ease; /* Added transition */
+}
+
+.project-info p:hover {
+    color: #56e1e6; /* Hover color */
 }
 
 .project-section {
@@ -582,6 +629,12 @@ nav ul li a:hover::after {
     padding-left: 30px;
     position: relative;
     font-size: 1.1rem;
+    color: var(--text-color); /* Added for consistency */
+    transition: color 0.3s ease; /* Added transition */
+}
+
+.project-section ul li:hover {
+    color: #56e1e6; /* Hover color */
 }
 
 .project-section ul li::before {
@@ -668,6 +721,11 @@ nav ul li a:hover::after {
     font-size: 1.05rem;
     color: var(--text-color);
     margin: 0 auto;
+    transition: color 0.3s ease; /* Added transition */
+}
+
+.step-item p:hover {
+    color: #56e1e6; /* Hover color */
 }
 
 .cta-contact {
@@ -680,6 +738,11 @@ nav ul li a:hover::after {
     margin-bottom: 35px;
     font-weight: 500;
     color: var(--heading-color);
+    transition: color 0.3s ease; /* Added transition */
+}
+
+.cta-contact p:hover {
+    color: #56e1e6; /* Hover color */
 }
 
 /* Contact Page - Form and Details */
@@ -769,6 +832,11 @@ nav ul li a:hover::after {
     font-size: 1.15rem;
     text-align: left;
     color: var(--text-color);
+    transition: color 0.3s ease; /* Added transition */
+}
+
+.contact-details p:hover {
+    color: #56e1e6; /* Hover color */
 }
 
 .contact-details a {
@@ -813,6 +881,11 @@ footer {
 footer p {
     margin-bottom: 20px;
     opacity: 0.8;
+    transition: color 0.3s ease; /* Added transition */
+}
+
+footer p:hover {
+    color: #56e1e6; /* Hover color */
 }
 
 footer ul {

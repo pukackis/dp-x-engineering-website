@@ -1,3 +1,5 @@
-feat: Adjust content and navigation padding for closer edge alignment
+feat: Update color palette and placeholder image colors
 
-This commit refines the layout by reducing horizontal padding in content sections and the navigation bar, bringing elements closer to the page edges for a more expansive feel. Max-width values have also been adjusted to accommodate these changes.
+This commit introduces a new color palette for the website, with a darker default theme. The header and footer background color has been updated to #256092.
+
+Additionally, the background and text colors of placeholder images across all HTML files have been updated to match the new dark theme, ensuring visual consistency.
