@@ -1,22 +1,11 @@
 :root {
-    --primary-color: #16B6A0; /* Turquoise */
-    --background-color: #FFFFFF; /* White */
-    --accent-color: #1A1A1A; /* Charcoal Gray */
-    --light-gray: #f4f4f4;
-    --text-color: #333;
-    --heading-color: var(--accent-color);
-    --border-color: #e0e0e0;
-}
-
-/* Dark Mode Variables */
-body.dark-mode {
-    --primary-color: #4CAF50; /* Green for dark mode */
-    --background-color: #1A1A1A;
-    --accent-color: #1A1A1A; /* Keep header dark in dark mode */
-    --light-gray: #2A2A2A;
-    --text-color: #E0E0E0;
-    --heading-color: #FFFFFF;
-    --border-color: #3A3A3A;
+    --primary-color: #59acdf; /* Blue */
+    --background-color: #04131a; /* Dark background */
+    --accent-color: #314097; /* Violet */
+    --light-gray: #102530; /* Slightly lighter dark for cards/sections */
+    --text-color: #56e1e6; /* Light for general text */
+    --heading-color: #56e1e6; /* Light for headings */
+    --border-color: #20303a; /* Slightly lighter border for dark elements */
 }
 
 /* Base Styles */
@@ -54,7 +43,7 @@ a {
 }
 
 a:hover {
-    color: #128c7a; /* Slightly darker turquoise */
+    color: var(--primary-color); /* Keep primary color on hover */
 }
 
 /* Utility Classes */
@@ -87,8 +76,9 @@ a:hover {
 }
 
 .btn.primary:hover {
-    background-color: #128c7a; /* Slightly darker turquoise */
-    border-color: #128c7a;
+    background-color: var(--primary-color); /* Keep primary color on hover */
+    border-color: var(--primary-color);
+    filter: brightness(1.2); /* Slightly brighter on hover */
 }
 
 .btn.secondary {
@@ -118,6 +108,9 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1500px; /* Add max-width to nav */
+    margin: 0 auto; /* Center the nav content */
+    padding: 0 10px; /* Adjusted horizontal padding for nav */
 }
 
 nav .logo {
@@ -140,17 +133,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: var(--background-color);
+    color: var(--text-color); /* Use text-color for links */
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
     position: relative;
     padding-bottom: 8px;
     font-size: 1.05rem;
-}
-
-body.dark-mode nav ul li a {
-    color: #FFFFFF; /* Ensure links are visible in dark mode header */
 }
 
 nav ul li a::after {
@@ -171,12 +160,8 @@ nav ul li a:hover::after {
 .lang-switcher {
     font-size: 0.95rem;
     font-weight: bold;
-    color: #bbb;
+    color: var(--text-color); /* Use text-color for lang switcher */
     margin-right: 20px; /* Space between lang and theme switcher */
-}
-
-body.dark-mode .lang-switcher {
-    color: #FFFFFF; /* Ensure lang switcher is visible in dark mode header */
 }
 
 .lang-switcher span {
@@ -195,12 +180,8 @@ body.dark-mode .lang-switcher {
 .theme-switcher {
     font-size: 1.2rem;
     cursor: pointer;
-    color: var(--background-color);
+    color: var(--text-color); /* Use text-color for theme switcher */
     transition: color 0.3s ease;
-}
-
-body.dark-mode .theme-switcher {
-    color: #FFFFFF; /* Ensure theme switcher is visible in dark mode header */
 }
 
 .theme-switcher:hover {
@@ -209,8 +190,8 @@ body.dark-mode .theme-switcher {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.8)), url('../img/hero-bg.jpg') no-repeat center center/cover;
-    color: var(--background-color);
+    background: linear-gradient(rgba(4, 19, 26, 0.8), rgba(4, 19, 26, 0.8)), url('../img/hero-bg.jpg') no-repeat center center/cover; /* Use new background color */
+    color: var(--text-color);
     text-align: center;
     padding: 180px 20px;
     min-height: 90vh;
@@ -229,7 +210,7 @@ body.dark-mode .theme-switcher {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(22, 182, 160, 0.4) 0%, transparent 70%); /* Increased opacity */
+    background: radial-gradient(circle, rgba(89, 172, 223, 0.4) 0%, transparent 70%); /* Use new primary color */
     pointer-events: none;
     animation: pulse 4s infinite alternate;
 }
@@ -277,13 +258,19 @@ body.dark-mode .theme-switcher {
 
 /* General Content Section Styling */
 .content-section {
-    padding: 100px 0;
+    padding: 60px 20px; /* Adjusted padding for content inside the frame */
+    max-width: 1300px; /* Make content even wider */
+    margin: 60px auto; /* Add margin top/bottom to separate sections visually and center */
     position: relative;
     overflow: hidden;
+    border-radius: 15px; /* Rounded corners for the frame */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Shadow for the frame effect */
+    border: 1px solid var(--border-color); /* Subtle border */
+    background-color: var(--background-color); /* Default background for odd sections */
 }
 
 .content-section:nth-of-type(even) {
-    background-color: var(--light-gray);
+    background-color: var(--light-gray); /* Alternate background for even sections */
 }
 
 .content-section h1,
@@ -386,7 +373,7 @@ body.dark-mode .theme-switcher {
 
 .founder-profile .title {
     font-weight: bold;
-    color: var(--accent-color);
+    color: var(--heading-color); /* Use heading color for title */
     margin-bottom: 15px;
     font-size: 1.1rem;
 }
@@ -400,7 +387,7 @@ body.dark-mode .theme-switcher {
 
 .founder-profile .location {
     font-style: italic;
-    color: #777;
+    color: var(--text-color); /* Use text color for location */
     font-size: 0.95rem;
     text-align: right;
 }
@@ -453,7 +440,7 @@ body.dark-mode .theme-switcher {
     text-align: center;
     font-style: italic;
     margin-top: 70px;
-    color: #777;
+    color: var(--text-color); /* Use text color for notes */
     font-size: 1.05rem;
 }
 
@@ -476,7 +463,7 @@ body.dark-mode .theme-switcher {
 }
 
 .filter-btn:hover {
-    background-color: #e0e0e0;
+    background-color: var(--border-color); /* Hover effect for filter buttons */
 }
 
 .filter-btn.active {
@@ -537,7 +524,7 @@ body.dark-mode .theme-switcher {
     text-align: center;
     max-width: 900px;
     margin: 0 auto 50px auto;
-    color: #555;
+    color: var(--text-color); /* Use text color for project intro */
 }
 
 .project-details-grid {
@@ -665,7 +652,8 @@ body.dark-mode .theme-switcher {
     line-height: 70px;
     border: 4px solid var(--primary-color);
     border-radius: 50%;
-    background-color: rgba(22, 182, 160, 0.1);
+    background-color: rgba(89, 172, 223, 0.1); /* Use new primary color */
+    text-align: center; /* Added for horizontal centering */
 }
 
 .step-item h3 {
@@ -739,7 +727,7 @@ body.dark-mode .theme-switcher {
 .contact-form input[type="email"]:focus,
 .contact-form textarea:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(22, 182, 160, 0.2);
+    box-shadow: 0 0 0 3px rgba(89, 172, 223, 0.2); /* Use new primary color */
     outline: none;
 }
 
@@ -751,7 +739,7 @@ body.dark-mode .theme-switcher {
 .contact-form input[type="file"] {
     padding: 12px;
     border: 1px dashed var(--primary-color);
-    background-color: rgba(22, 182, 160, 0.05);
+    background-color: rgba(89, 172, 223, 0.05); /* Use new primary color */
 }
 
 .contact-form button.btn {
@@ -794,12 +782,12 @@ body.dark-mode .theme-switcher {
 }
 
 .map-placeholder {
-    background-color: #e0e0e0;
+    background-color: var(--light-gray); /* Use light-gray for map placeholder */
     height: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #777;
+    color: var(--text-color); /* Use text color for map placeholder text */
     border-radius: 8px;
     margin-top: 35px;
     overflow: hidden;
@@ -815,7 +803,7 @@ body.dark-mode .theme-switcher {
 /* Footer */
 footer {
     background-color: var(--accent-color);
-    color: var(--background-color);
+    color: var(--text-color); /* Use text color for footer text */
     text-align: center;
     padding: 3.5rem 0;
     margin-top: 100px;
@@ -842,7 +830,7 @@ footer ul li {
 }
 
 footer ul li a {
-    color: var(--background-color);
+    color: var(--text-color); /* Use text color for footer links */
     text-decoration: none;
     transition: color 0.3s ease;
     opacity: 0.8;

@@ -1,4 +1,3 @@
-feat: Implement dark mode and enhance hero background animation
+fix: Ensure header text visibility in dark mode
 
-This commit introduces a dark mode feature with a toggle switch in the header, allowing users to switch between light and dark themes. User preferences are saved in local storage.
-Additionally, the pulsating background animation in the hero section has been enhanced to be more prominent and visually appealing.
+This commit fixes the issue where header text (navigation links, language switcher, theme switcher) was invisible in dark mode due to conflicting color variables. Specific CSS rules have been added to ensure these elements are always visible with a light color in dark mode.
