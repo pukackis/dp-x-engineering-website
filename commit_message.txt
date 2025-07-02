@@ -1,3 +1,3 @@
-fix: Ensure header text visibility in dark mode
+feat: Adjust content and navigation padding for closer edge alignment
 
-This commit fixes the issue where header text (navigation links, language switcher, theme switcher) was invisible in dark mode due to conflicting color variables. Specific CSS rules have been added to ensure these elements are always visible with a light color in dark mode.
+This commit refines the layout by reducing horizontal padding in content sections and the navigation bar, bringing elements closer to the page edges for a more expansive feel. Max-width values have also been adjusted to accommodate these changes.
