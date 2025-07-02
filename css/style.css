@@ -114,9 +114,10 @@ nav {
 }
 
 nav .logo img {
-    height: 50px; /* Adjust logo height as needed */
+    height: 65px; /* Increased logo height */
     width: auto;
     vertical-align: middle;
+    margin-left: 10px; /* Move logo slightly to the right */
 }
 
 nav ul {

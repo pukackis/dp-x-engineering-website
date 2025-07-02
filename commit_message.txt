@@ -1,3 +1,3 @@
-feat: Implement irregular header shape using CSS transforms
+feat: Integrate company logo into header
 
-This commit introduces a dynamic, irregular shape to the header using CSS `transform: skewY()`. The header itself is skewed, and its content (navigation) is counter-skewed to remain straight, creating a visually appealing, non-flat transition.
+This commit replaces the text-based logo in the header with the provided 'logo_firmy.png' image across all HTML files. Corresponding CSS styles have been added to ensure the logo is displayed correctly and responsively.
