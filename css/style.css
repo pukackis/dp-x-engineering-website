@@ -12,7 +12,7 @@
 body.dark-mode {
     --primary-color: #4CAF50; /* Green for dark mode */
     --background-color: #1A1A1A;
-    --accent-color: #FFFFFF;
+    --accent-color: #1A1A1A; /* Keep header dark in dark mode */
     --light-gray: #2A2A2A;
     --text-color: #E0E0E0;
     --heading-color: #FFFFFF;
@@ -149,6 +149,10 @@ nav ul li a {
     font-size: 1.05rem;
 }
 
+body.dark-mode nav ul li a {
+    color: #FFFFFF; /* Ensure links are visible in dark mode header */
+}
+
 nav ul li a::after {
     content: '';
     position: absolute;
@@ -171,6 +175,10 @@ nav ul li a:hover::after {
     margin-right: 20px; /* Space between lang and theme switcher */
 }
 
+body.dark-mode .lang-switcher {
+    color: #FFFFFF; /* Ensure lang switcher is visible in dark mode header */
+}
+
 .lang-switcher span {
     cursor: pointer;
     transition: color 0.3s ease;
@@ -189,6 +197,10 @@ nav ul li a:hover::after {
     cursor: pointer;
     color: var(--background-color);
     transition: color 0.3s ease;
+}
+
+body.dark-mode .theme-switcher {
+    color: #FFFFFF; /* Ensure theme switcher is visible in dark mode header */
 }
 
 .theme-switcher:hover {

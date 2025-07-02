@@ -1,6 +1,4 @@
-fix: Improve styling of subpages for consistency and modern aesthetic
+feat: Implement dark mode and enhance hero background animation
 
-This commit addresses the styling issues on subpages, ensuring they align with the overall modern and professional design of the main page.
-- Enhanced typography, spacing, and visual elements across all detailed subpages (About Us, Services, Work With Us, Contact, and all Portfolio project pages).
-- Implemented specific styles for project detail sections (e.g., project-details-grid, project-info, project-section) to improve readability and visual appeal.
-- Refined responsive adjustments for better display on various screen sizes.
+This commit introduces a dark mode feature with a toggle switch in the header, allowing users to switch between light and dark themes. User preferences are saved in local storage.
+Additionally, the pulsating background animation in the hero section has been enhanced to be more prominent and visually appealing.
