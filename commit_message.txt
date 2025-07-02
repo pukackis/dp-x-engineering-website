@@ -1,3 +1,6 @@
-feat: Enhance About Us section with detailed founder bios
+fix: Improve styling of subpages for consistency and modern aesthetic
 
-This commit expands the 'About Us' section by integrating detailed biographies for Szymon Pukacki and Michał Dydecki, based on their LinkedIn profiles. New CSS styles have been added to 'style.css' to properly format these founder profiles.
+This commit addresses the styling issues on subpages, ensuring they align with the overall modern and professional design of the main page.
+- Enhanced typography, spacing, and visual elements across all detailed subpages (About Us, Services, Work With Us, Contact, and all Portfolio project pages).
+- Implemented specific styles for project detail sections (e.g., project-details-grid, project-info, project-section) to improve readability and visual appeal.
+- Refined responsive adjustments for better display on various screen sizes.

@@ -8,6 +8,17 @@
     --border-color: #e0e0e0;
 }
 
+/* Dark Mode Variables */
+body.dark-mode {
+    --primary-color: #4CAF50; /* Green for dark mode */
+    --background-color: #1A1A1A;
+    --accent-color: #FFFFFF;
+    --light-gray: #2A2A2A;
+    --text-color: #E0E0E0;
+    --heading-color: #FFFFFF;
+    --border-color: #3A3A3A;
+}
+
 /* Base Styles */
 html {
     scroll-behavior: smooth;
@@ -23,6 +34,7 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 *, *::before, *::after {
@@ -99,6 +111,7 @@ header {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 nav {
@@ -155,6 +168,7 @@ nav ul li a:hover::after {
     font-size: 0.95rem;
     font-weight: bold;
     color: #bbb;
+    margin-right: 20px; /* Space between lang and theme switcher */
 }
 
 .lang-switcher span {
@@ -167,6 +181,17 @@ nav ul li a:hover::after {
 }
 
 .lang-switcher span.active {
+    color: var(--primary-color);
+}
+
+.theme-switcher {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--background-color);
+    transition: color 0.3s ease;
+}
+
+.theme-switcher:hover {
     color: var(--primary-color);
 }
 
@@ -192,13 +217,13 @@ nav ul li a:hover::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(22, 182, 160, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(22, 182, 160, 0.4) 0%, transparent 70%); /* Increased opacity */
     pointer-events: none;
     animation: pulse 4s infinite alternate;
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); opacity: 0.8; }
+    0% { transform: scale(1); opacity: 0.6; }
     100% { transform: scale(1.05); opacity: 1; }
 }
 

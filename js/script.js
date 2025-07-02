@@ -14,6 +14,43 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Dark mode switcher functionality
+    const themeSwitcher = document.querySelector('.theme-switcher i');
+    const body = document.body;
+
+    // Load theme preference from localStorage
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+        body.classList.add(currentTheme);
+        if (currentTheme === 'dark-mode') {
+            themeSwitcher.classList.remove('fa-moon');
+            themeSwitcher.classList.add('fa-sun');
+        } else {
+            themeSwitcher.classList.remove('fa-sun');
+            themeSwitcher.classList.add('fa-moon');
+        }
+    } else {
+        // Default to dark mode if no preference is set
+        body.classList.add('dark-mode');
+        themeSwitcher.classList.remove('fa-moon');
+        themeSwitcher.classList.add('fa-sun');
+        localStorage.setItem('theme', 'dark-mode'); // Save dark mode as default
+    }
+
+    themeSwitcher.addEventListener('click', () => {
+        if (body.classList.contains('dark-mode')) {
+            body.classList.remove('dark-mode');
+            themeSwitcher.classList.remove('fa-sun');
+            themeSwitcher.classList.add('fa-moon');
+            localStorage.setItem('theme', 'light-mode');
+        } else {
+            body.classList.add('dark-mode');
+            themeSwitcher.classList.remove('fa-moon');
+            themeSwitcher.classList.add('fa-sun');
+            localStorage.setItem('theme', 'dark-mode');
+        }
+    });
+
     // Smooth scrolling for anchor links (if any)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
