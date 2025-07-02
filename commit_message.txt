@@ -1,3 +1,1 @@
-Clean: Clear README.md
-
-Cleared the content of README.md as requested.
+Update website content and styling based on new prompt, fix Tailwind CSS configuration.
