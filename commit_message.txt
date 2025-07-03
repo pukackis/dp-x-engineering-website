@@ -1,1 +1,1 @@
-feat: Add video background to hero section
+fix: Correct video paths for GitHub Pages
