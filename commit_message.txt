@@ -1,1 +1,1 @@
-fix: Use full Git LFS URL for video
+fix: Update video to smaller file size and correct path

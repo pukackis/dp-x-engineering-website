@@ -235,6 +235,10 @@ nav ul li a:hover::after {
 .hero-content {
     max-width: 900px;
     z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     animation: fadeInDown 1s ease-out;
 }
 
