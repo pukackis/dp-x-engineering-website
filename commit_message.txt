@@ -1,3 +1,1 @@
-fix: Correct language switcher logic for GitHub Pages
-
-This commit updates the JavaScript logic for the language switcher to correctly handle URL paths on GitHub Pages. The script now properly constructs the new URL, ensuring seamless language switching without encountering '404 Not Found' errors.
+feat: Add video background to hero section

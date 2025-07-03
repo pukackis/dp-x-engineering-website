@@ -189,7 +189,6 @@ nav ul li a:hover::after {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(4, 19, 26, 0.8), rgba(4, 19, 26, 0.8)), url('../img/hero-bg.jpg') no-repeat center center/cover; /* Use new background color */
     color: var(--text-color);
     text-align: center;
     padding: 180px 20px;
@@ -199,7 +198,21 @@ nav ul li a:hover::after {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background-attachment: fixed; /* Parallax effect */
+}
+
+#hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    transition: 1s opacity;
+    filter: brightness(0.4);
 }
 
 .hero::before {
