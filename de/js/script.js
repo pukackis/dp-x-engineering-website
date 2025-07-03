@@ -6,15 +6,19 @@ document.addEventListener('DOMContentLoaded', () => {
         switcher.addEventListener('click', () => {
             const selectedLang = switcher.dataset.lang;
             const pathParts = window.location.pathname.split('/').filter(part => part !== '');
-            
-            // Assuming URL structure is /repo-name/lang/page.html
-            // pathParts[0] is repo-name
-            // pathParts[1] is current language (en, de, pl)
-            
-            const repoName = pathParts[0];
-            const currentPagePath = pathParts.slice(2).join('/'); // Get path after language
+            let newPathname;
 
-            const newPathname = `/${repoName}/${selectedLang}/${currentPagePath}`;
+            // Check if the first part of the path is a language code (e.g., 'en', 'de', 'pl')
+            // This indicates a root deployment (like on Hostinger)
+            if (['en', 'de', 'pl'].includes(pathParts[0])) {
+                const currentPagePath = pathParts.slice(1).join('/'); // Get path after language
+                newPathname = `/${selectedLang}/${currentPagePath}`;
+            } else {
+                // Assuming it's a GitHub Pages-like structure: /repo-name/lang/page.html
+                const repoName = pathParts[0];
+                const currentPagePath = pathParts.slice(2).join('/'); // Get path after language
+                newPathname = `/${repoName}/${selectedLang}/${currentPagePath}`;
+            }
             window.location.href = window.location.origin + newPathname;
         });
     });
